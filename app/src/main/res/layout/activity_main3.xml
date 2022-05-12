@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/idRecyclerView"
+        android:layout_width="407dp"
+        android:layout_height="730dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/idTimeHr"
+        android:layout_width="92dp"
+        android:layout_height="46dp"
+        android:entries="@array/timeHr"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/idTimeMin"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idTimeMin" />
+
+    <Spinner
+        android:id="@+id/idTimeFactor"
+        android:layout_width="92dp"
+        android:layout_height="46dp"
+        android:entries="@array/timeFactor"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/idTimeMin"
+        app:layout_constraintTop_toTopOf="@+id/idTimeMin" />
+
+    <Spinner
+        android:id="@+id/idTimeMin"
+        android:layout_width="92dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="44dp"
+        android:entries="@array/TimeMin"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idDay" />
+
+    <Spinner
+        android:id="@+id/idDay"
+        android:layout_width="98dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="60dp"
+        android:entries="@array/Day"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idParticipant" />
+
+    <Spinner
+        android:id="@+id/idYear"
+        android:layout_width="111dp"
+        android:layout_height="33dp"
+        android:entries="@array/year"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toEndOf="@+id/idDay"
+        app:layout_constraintTop_toTopOf="@+id/idDay" />
+
+    <Button
+        android:id="@+id/idSubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/submitBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/idPriority"
+        android:layout_width="211dp"
+        android:layout_height="106dp"
+        android:text="@string/priority"
+        android:textColor="#000000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/idSubmitBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/idParticipant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/idMonth"
+        android:layout_width="98dp"
+        android:layout_height="34dp"
+        android:entries="@array/Month"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/idDay"
+        app:layout_constraintHorizontal_bias="0.568"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idDay" />
+
+    <EditText
+        android:id="@+id/idPlace"
+        android:layout_width="365dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="56dp"
+        android:ems="10"
+        android:hint="@string/placeHint"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idTimeMin" />
+
+    <EditText
+        android:id="@+id/idAdditional"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/phoneHint"
+        android:inputType="phone"
+        android:textColorHighlight="#000000"
+        android:textColorHint="?android:attr/textColorHint"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/idPriority"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idPlace"
+        app:layout_constraintVertical_bias="0.586" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
